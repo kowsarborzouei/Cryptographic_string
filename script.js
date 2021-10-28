@@ -1,4 +1,4 @@
-let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z','a'];
+let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a'];
 let str_new = []
 
 function cryptographic(str_len, repeat, str) {
@@ -6,12 +6,12 @@ function cryptographic(str_len, repeat, str) {
         str = str.split('')
     }
     for (let k = 0; k < repeat; k++) {
-        let n=str.length;
-        let temp=str_len-1
+        let n = str.length;
+        let temp = str_len - 1
         str_len = str_len % n;
-        let first_x_element=str.slice(0,temp)
-        let remaining_element=str.slice(temp,n)
-        str=[...remaining_element,...first_x_element]
+        let first_x_element = str.slice(0, temp)
+        let remaining_element = str.slice(temp, n)
+        str = [...remaining_element, ...first_x_element]
         for (let i = 0; i < str.length; i++) {
             for (let j = 0; j < alphabet.length; j++) {
                 if (alphabet[j] === str[i]) {
@@ -25,10 +25,10 @@ function cryptographic(str_len, repeat, str) {
         str = str_new;
     }
     // console.log(str)
-    str=str.toString()
-    let stringWithoutComma =  str.replace(/,/g,'')
+    str = str.toString()
+    let stringWithoutComma = str.replace(/,/g, '')
     // console.log(str)
-    console.log("Final String: "+ stringWithoutComma)
+    console.log("Final String: " + stringWithoutComma)
 
 
 }
