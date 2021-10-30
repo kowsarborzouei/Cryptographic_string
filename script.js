@@ -1,6 +1,5 @@
 let alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'a'];
 let str_new = []
-
 function cryptographic(str_len, repeat, str) {
     if (typeof str === "string") {
         str = str.split('')
@@ -18,19 +17,12 @@ function cryptographic(str_len, repeat, str) {
                     str_new[i] = alphabet[j + 1]
                     break
                 }
-
             }
-
         }
         str = str_new;
     }
-    // console.log(str)
     str = str.toString()
     let stringWithoutComma = str.replace(/,/g, '')
-    // console.log(str)
     console.log("Final String: " + stringWithoutComma)
-
-
 }
-
 cryptographic(4, 5, 'abcd')
